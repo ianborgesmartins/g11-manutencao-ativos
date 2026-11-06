@@ -1,0 +1,12 @@
+﻿server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/manutencao}
+    username: ${SPRING_DATASOURCE_USERNAME:app_backend}
+    password: ${SPRING_DATASOURCE_PASSWORD:Backend@2026}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
