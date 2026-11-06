@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Manutencao de Ativos</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0 25px; }
+        th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+        input { margin-right: 6px; padding: 4px; }
+        .erro { color: red; }
+    </style>
+</head>
+<body>
+    <section id="tela-login">
+        <h2>Login</h2>
+        <input id="login" placeholder="usuario">
+        <input id="senha" type="password" placeholder="senha">
+        <button onclick="entrar()">Entrar</button>
+        <p id="erro" class="erro"></p>
+    </section>
+
+    <section id="tela-app" hidden>
+        <h2>Maquinas</h2>
+        <input type="hidden" id="m-id">
+        <input id="m-codigo" placeholder="codigo">
+        <input id="m-nome" placeholder="nome">
+        <input id="m-setor" placeholder="setor">
+        <button onclick="salvarMaquina()">Salvar</button>
+        <button onclick="limparForm()">Limpar</button>
+
+        <table>
+            <thead><tr><th>Codigo</th><th>Nome</th><th>Setor</th><th>Status</th><th>Acoes</th></tr></thead>
+            <tbody id="tb-maquinas"></tbody>
+        </table>
+
+        <h2>Ordens de Servico</h2>
+        <table>
+            <thead><tr><th>OS</th><th>Maquina</th><th>Tecnico</th><th>Status</th><th>Custo</th><th>Acao</th></tr></thead>
+            <tbody id="tb-os"></tbody>
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
